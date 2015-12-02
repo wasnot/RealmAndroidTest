@@ -1,8 +1,6 @@
 
 package jp.freebit.databasetest;
 
-import java.util.List;
-
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,6 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -24,15 +25,20 @@ import jp.freebit.databasetest.SQLite.UserItem;
 public class MainActivity extends ActionBarActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+
     @Bind(R.id.listRealm)
     View listRealm;
+
     @Bind(R.id.listSqlite)
     View listSqlite;
+
     @Bind(R.id.editText)
     EditText editText;
 
     ListHolder realmHolder;
+
     ListHolder sqliteHolder;
+
     int count = 10000;
 
     @Override
@@ -114,7 +120,7 @@ public class MainActivity extends ActionBarActivity {
 
                     @Override
                     protected Void doInBackground(Void... params) {
-                        Realm realm = Realm.getInstance(getApplicationContext());
+                        Realm realm = Realm.getDefaultInstance();
                         //
                         long start = System.currentTimeMillis();
                         List<User> items = RealmUtil.makeUsers(count);
@@ -162,6 +168,7 @@ public class MainActivity extends ActionBarActivity {
 
         @Bind(R.id.textTitle)
         TextView textTitle;
+
         @Bind(R.id.textValue)
         TextView textValue;
 

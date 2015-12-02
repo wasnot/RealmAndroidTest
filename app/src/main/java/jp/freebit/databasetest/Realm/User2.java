@@ -12,7 +12,9 @@ public class User2 extends RealmObject {
 
     @Index
     private String name;
+
     private int age;
+
     private String email;
 
     @Ignore

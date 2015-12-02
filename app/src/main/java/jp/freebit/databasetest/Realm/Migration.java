@@ -8,6 +8,7 @@ import io.realm.RealmMigration;
  * Created by akihiroaida on 15/03/12.
  */
 public class Migration implements RealmMigration {
+
     @Override
     public long execute(Realm realm, long version) {
         // Migrate from version 0 to version 1

@@ -1,12 +1,14 @@
 package jp.freebit.databasetest;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
+import jp.freebit.databasetest.Realm.TestData;
 import jp.freebit.databasetest.Realm.User;
 
 /**
@@ -15,11 +17,11 @@ import jp.freebit.databasetest.Realm.User;
 public class RealmUtil {
 
 
-    public void testRealm(Context con) {
+    public void testRealm() {
 
         // Write
         // Obtain a Realm instance
-        Realm realm = Realm.getInstance(con);
+        Realm realm = Realm.getDefaultInstance();
 
         realm.beginTransaction();
 
@@ -113,6 +115,12 @@ public class RealmUtil {
     public static void remove(Realm realm) {
         realm.beginTransaction();
         realm.clear(User.class);
+        realm.commitTransaction();
+    }
+
+    public static void putTestData(Realm realm, TestData data) {
+        realm.beginTransaction();
+        realm.copyToRealm(data);
         realm.commitTransaction();
     }
 }
