@@ -149,10 +149,10 @@ public class TestDataActivity extends Activity {
         Realm realm = Realm.getDefaultInstance();
         long count = realm.where(TestData.class).count();
         String time = "-";
-        RealmResults<TestData> result = realm.where(TestData.class).findAllSorted("timestamp", false);
-        if (result.size() > 0) {
-            time = result.first().getTimestamp() + "";
-        }
+//        RealmResults<TestData> result = realm.where(TestData.class).findAllSorted("timestamp", false);
+//        if (result.size() > 0) {
+//            time = result.first().getTimestamp() + "";
+//        }
         realm.close();
         textView.setText("count:" + count + "\ntime:" + time + "\nnow:" + System.currentTimeMillis());
     }
