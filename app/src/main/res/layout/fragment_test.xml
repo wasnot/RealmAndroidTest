@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".fragment.TestActivityFragment"
+        >
+
+    <TextView
+            android:id="@+id/labelRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Realm"
+            />
+
+    <TextView
+            android:id="@+id/valueRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/labelRealm"
+            android:text=""
+            />
+
+    <Button
+            android:id="@+id/buttonInsertRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/valueRealm"
+            android:text="insert"
+            />
+
+    <Button
+            android:id="@+id/buttonBulkInsertRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueRealm"
+            android:layout_toEndOf="@+id/buttonInsertRealm"
+            android:layout_toRightOf="@+id/buttonInsertRealm"
+            android:text="insertb"
+            />
+
+    <Button
+            android:id="@+id/buttonRemoveRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueRealm"
+            android:layout_toEndOf="@+id/buttonBulkInsertRealm"
+            android:layout_toRightOf="@+id/buttonBulkInsertRealm"
+            android:text="remove"
+            />
+
+    <Button
+            android:id="@+id/buttonDropRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueRealm"
+            android:layout_toEndOf="@+id/buttonRemoveRealm"
+            android:layout_toRightOf="@+id/buttonRemoveRealm"
+            android:text="drop"
+            />
+
+    <TextView
+            android:id="@+id/labelSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="SQLite"
+            />
+
+    <TextView
+            android:id="@+id/valueSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/labelSQLite"
+            android:layout_centerVertical="true"
+            android:text=""
+            />
+
+    <Button
+            android:id="@+id/buttonInsertSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/valueSQLite"
+            android:text="Insert"
+            />
+
+    <Button
+            android:id="@+id/buttonBulkInsertSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueSQLite"
+            android:layout_toEndOf="@+id/buttonInsertSQLite"
+            android:layout_toRightOf="@+id/buttonInsertSQLite"
+            android:text="Insertb"
+            />
+
+    <Button
+            android:id="@+id/buttonRemoveSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueSQLite"
+            android:layout_toEndOf="@+id/buttonBulkInsertSQLite"
+            android:layout_toRightOf="@+id/buttonBulkInsertSQLite"
+            android:text="Remove"
+            />
+
+    <Button
+            android:id="@+id/buttonDropSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/valueSQLite"
+            android:layout_toEndOf="@+id/buttonRemoveSQLite"
+            android:layout_toRightOf="@+id/buttonRemoveSQLite"
+            android:text="drop"
+            />
+
+    <EditText
+            android:id="@+id/editValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="100"
+            />
+
+    <Button
+            android:id="@+id/buttonListRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="realm"
+            />
+
+    <Button
+            android:id="@+id/buttonListSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editValue"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="SQLite"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonInsertRealm"
+            android:text="select"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonInsertSQLite"
+            android:text="select"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectAllRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonBulkInsertRealm"
+            android:layout_toEndOf="@+id/buttonSelectRealm"
+            android:layout_toRightOf="@+id/buttonSelectRealm"
+            android:text="SelectAll"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectAllSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonBulkInsertSQLite"
+            android:layout_toEndOf="@+id/buttonSelectSQLite"
+            android:layout_toRightOf="@+id/buttonSelectSQLite"
+            android:text="SelectAll"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectOneRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buttonSelectAllRealm"
+            android:layout_toEndOf="@+id/buttonSelectAllRealm"
+            android:layout_toRightOf="@+id/buttonSelectAllRealm"
+            android:text="SelectOne"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectOneSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buttonSelectAllSQLite"
+            android:layout_toEndOf="@+id/buttonSelectAllSQLite"
+            android:layout_toRightOf="@+id/buttonSelectAllSQLite"
+            android:text="selectOne"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectViewSQLite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonDropSQLite"
+            android:layout_toEndOf="@+id/buttonSelectOneSQLite"
+            android:layout_toRightOf="@+id/buttonSelectOneSQLite"
+            android:text="a"
+            />
+
+    <Button
+            android:id="@+id/buttonSelectViewRealm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonSelectViewSQLite"
+            android:layout_alignStart="@+id/buttonSelectViewSQLite"
+            android:layout_alignTop="@+id/buttonSelectOneRealm"
+            android:text="a"
+            />
+</RelativeLayout>

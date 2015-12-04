@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="jp.freebit.databasetest"
+          package="net.wasnot.android.databasetest"
         >
 
     <application
@@ -42,9 +42,9 @@
                 />
 
         <activity
-                android:name=".TestDataActivity"
+                android:name=".activity.TestDataActivity"
                 android:label="@string/app_name"
-                ></activity>
+                />
 
         <service
                 android:name=".DatabaseService"
@@ -53,16 +53,27 @@
                 />
 
         <activity
-                android:name=".HandlerTestActivity"
+                android:name=".activity.HandlerTestActivity"
                 android:label="@string/title_activity_handler_test"
+                />
+        <activity android:name=".activity.MainActivity" />
+
+        <activity
+                android:name=".activity.TestActivity"
+                android:label="@string/title_activity_test"
+                android:theme="@style/AppTheme.NoActionBar"
+                ></activity>
+
+        <activity-alias
+                android:name="net.wasnot.android.database.LaunchActivity"
+                android:targetActivity=".activity.TestActivity"
                 >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
+        </activity-alias>
     </application>
 
 </manifest>
