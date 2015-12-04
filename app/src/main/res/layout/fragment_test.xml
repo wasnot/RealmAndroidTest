@@ -6,7 +6,7 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                tools:context=".fragment.TestActivityFragment"
+                tools:context=".fragment.QueryFragment"
         >
 
     <TextView
@@ -139,26 +139,6 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="100"
-            />
-
-    <Button
-            android:id="@+id/buttonListRealm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:text="realm"
-            />
-
-    <Button
-            android:id="@+id/buttonListSQLite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/editValue"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:text="SQLite"
             />
 
     <Button

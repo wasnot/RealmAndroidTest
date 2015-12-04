@@ -6,8 +6,6 @@ import net.wasnot.android.databasetest.RealmUtil;
 import net.wasnot.android.databasetest.SQLite.TestDatabase;
 import net.wasnot.android.databasetest.SQLite.UserColumns;
 import net.wasnot.android.databasetest.SQLiteUtil;
-import net.wasnot.android.databasetest.bus.BusHolder;
-import net.wasnot.android.databasetest.bus.SwitchEvent;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -32,7 +30,7 @@ import io.realm.RealmResults;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class TestActivityFragment extends Fragment {
+public class QueryFragment extends Fragment {
 
     @Bind(R.id.valueRealm)
     TextView valueRealm;
@@ -59,20 +57,14 @@ public class TestActivityFragment extends Fragment {
         ButterKnife.unbind(this);
     }
 
-    @OnClick({R.id.buttonListRealm, R.id.buttonListSQLite})
-    public void onNext(View v) {
-        switch (v.getId()) {
-            case R.id.buttonListRealm:
-            case R.id.buttonListSQLite:
-                BusHolder.get().post(new SwitchEvent(v.getId()));
-                break;
-        }
-    }
-
-    @OnClick({R.id.buttonInsertRealm, R.id.buttonBulkInsertRealm, R.id.buttonRemoveRealm, R.id.buttonDropRealm,
-            R.id.buttonInsertSQLite, R.id.buttonBulkInsertSQLite, R.id.buttonRemoveSQLite, R.id.buttonDropSQLite,
-            R.id.buttonSelectRealm, R.id.buttonSelectSQLite, R.id.buttonSelectAllRealm, R.id.buttonSelectAllSQLite
-            , R.id.buttonSelectOneRealm, R.id.buttonSelectOneSQLite, R.id.buttonSelectViewSQLite, R.id.buttonSelectViewRealm})
+    @OnClick({R.id.buttonInsertRealm, R.id.buttonBulkInsertRealm, R.id.buttonRemoveRealm,
+            R.id.buttonDropRealm,
+            R.id.buttonInsertSQLite, R.id.buttonBulkInsertSQLite, R.id.buttonRemoveSQLite,
+            R.id.buttonDropSQLite,
+            R.id.buttonSelectRealm, R.id.buttonSelectSQLite, R.id.buttonSelectAllRealm,
+            R.id.buttonSelectAllSQLite
+            , R.id.buttonSelectOneRealm, R.id.buttonSelectOneSQLite, R.id.buttonSelectViewSQLite,
+            R.id.buttonSelectViewRealm})
     public void onClick(View v) {
         if (myTask == null) {
             myTask = new MyTask();

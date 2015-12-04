@@ -53,25 +53,19 @@
                 />
 
         <activity
-                android:name=".activity.HandlerTestActivity"
-                android:label="@string/title_activity_handler_test"
-                />
-        <activity android:name=".activity.MainActivity" />
-
-        <activity
-                android:name=".activity.TestActivity"
-                android:label="@string/title_activity_test"
+                android:name=".activity.MainActivity"
+                android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar"
                 ></activity>
 
         <activity-alias
                 android:name="net.wasnot.android.database.LaunchActivity"
-                android:targetActivity=".activity.TestActivity"
+                android:targetActivity=".activity.MainActivity"
                 >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
     </application>
